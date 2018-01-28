@@ -2,6 +2,10 @@
   "name": "natours",
   "version": "1.0.0",
   "description": "Landing page for natours",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisnorthcutt/advanced-css-course.git"
+  },
   "main": "index.js",
   "scripts": {
     "compile:sass": "node-sass sass/main.scss css/style.css -w"
