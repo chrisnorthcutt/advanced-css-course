@@ -117,12 +117,55 @@ body {
     -webkit-animation: moveInRight 1s ease-out;
     animation: moveInRight 1s ease-out; }
 
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: -webkit-gradient(linear, left top, right top, from(#7ed56f), to(#28b485));
+  background-image: -webkit-linear-gradient(left, #7ed56f, #28b485);
+  background-image: -o-linear-gradient(left, #7ed56f, #28b485);
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s; }
+  .heading-secondary:hover {
+    -webkit-transform: skewY(2deg) skewX(15deg) scale(1.1);
+    -ms-transform: skewY(2deg) skewX(15deg) scale(1.1);
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   /* font-size: 16px; */
   line-height: 1.7;
   color: #777; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
 
 /*---------------------------
 	Buttons
@@ -136,9 +179,11 @@ body {
   position: relative;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-transition: .2s box-shadow ease-out, .2s transform ease-out;
-  -o-transition: .2s box-shadow ease-out, .2s transform ease-out;
-  transition: .2s box-shadow ease-out, .2s transform ease-out;
+  -webkit-transition: 0.2s -webkit-box-shadow ease-out, 0.2s -webkit-transform ease-out;
+  transition: 0.2s -webkit-box-shadow ease-out, 0.2s -webkit-transform ease-out;
+  -o-transition: 0.2s box-shadow ease-out, 0.2s transform ease-out;
+  transition: 0.2s box-shadow ease-out, 0.2s transform ease-out;
+  transition: 0.2s box-shadow ease-out, 0.2s transform ease-out, 0.2s -webkit-box-shadow ease-out, 0.2s -webkit-transform ease-out;
   font-size: 1.6rem; }
 
 .btn:hover {
@@ -167,7 +212,7 @@ body {
     background-color: #fff; }
 
 .btn::after {
-  content: '';
+  content: "";
   display: inline-block;
   height: 100%;
   width: 100%;
@@ -176,19 +221,45 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  -webkit-transition: .5s all ease-out;
-  -o-transition: .5s all ease-out;
-  transition: .5s all ease-out; }
+  -webkit-transition: 0.5s all ease-out;
+  -o-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out; }
 
 .btn--animated {
-  -webkit-animation: .5s moveInBottom ease-out .75s;
-  animation: .5s moveInBottom ease-out .75s;
+  -webkit-animation: 0.5s moveInBottom ease-out 0.75s;
+  animation: 0.5s moveInBottom ease-out 0.75s;
   -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards; }
 
+.btn-text:link, .btn-text:visited {
+  color: #55c57a;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #55c57a;
+  padding: 3px;
+  font-size: 1.6rem;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s; }
+
+.btn-text:hover {
+  color: #fff;
+  background: #55c57a;
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px); }
+
+.btn-text:active {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
+
 .row {
   max-width: 114rem;
-  background-color: #eee;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
@@ -197,7 +268,6 @@ body {
     display: table;
     clear: both; }
   .row [class^="col-"] {
-    background-color: orangered;
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
@@ -239,3 +309,8 @@ body {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh; }
